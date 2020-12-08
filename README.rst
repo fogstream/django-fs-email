@@ -17,7 +17,7 @@ Installation
 
     INSTALLED_APPS = (
         ...
-        'email',
+        'fs_email',
         ...
     )
 

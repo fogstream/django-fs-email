@@ -2,7 +2,7 @@ import setuptools
 
 
 setuptools.setup(
-    name='django-fs-leonid',
+    name='django-fs-email',
     version='1.0.0',
     packages=['fs_email'],
     include_package_data=True,
