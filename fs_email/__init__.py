@@ -14,7 +14,7 @@ def send_email(addr_from, addr_to, subject, template, context, attachments=None,
     from .models import Email
 
     # Allow for a single address to be passed in.
-    if not hasattr(addr_to, '__iter__'):
+    if isinstance(addr_to, str):
         addr_to = [addr_to]
 
     body_html = loader.get_template(template).render(context)
