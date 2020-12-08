@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name='django-fs-email',
-    version='1.0.0',
+    version='1.0.1',
     packages=['fs_email'],
     include_package_data=True,
     install_requires=['html2text'],
