@@ -5,7 +5,6 @@ from smtplib import SMTPException
 
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
-from django.template.context import Context
 
 
 default_app_config = 'fs_email.apps.FsEmailConfig'
@@ -18,7 +17,7 @@ def send_email(addr_from, addr_to, subject, template, context, attachments=None,
     if not hasattr(addr_to, '__iter__'):
         addr_to = [addr_to]
 
-    body_html = loader.get_template(template).render(Context(context))
+    body_html = loader.get_template(template).render(context)
     alternatives_parts = [(body_html, 'text/html')]
 
     body_txt = html2text(body_html)
